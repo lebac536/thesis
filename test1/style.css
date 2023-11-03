@@ -367,6 +367,13 @@ height: 100vh;
 }
 
 #movableDiv {
- max-height: 50px;
+  background-color: aquamarine;
  position: absolute;
+align-items: center;
+max-width: 100px;
+}
+
+img {
+display: inline;
+align-self: center;
 }
