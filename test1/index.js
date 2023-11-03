@@ -8,17 +8,17 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('keydown', (event) => {
         console.log("Key pressed:", event.key);
 
-        const moveDistance = 30;
+        const moveDistance = 40;
         
 
         if (event.key === 'ArrowRight') {
-          imageElement.src = 'character_views/rightView.png';
+          imageElement.src = 'test1/character_views/rightView.png';
             leftPosition += moveDistance;
         
 
              } else if (event.key === 'd') {
             leftPosition += moveDistance;
-            imageElement.src = 'character_views/rightView.png'; // Change to face right
+            imageElement.src = 'test1/character_views/rightView.png'; // Change to face right
     
 
 
