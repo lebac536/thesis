@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
 
         if (event.key === 'ArrowRight') {
-          imageElement.src = 'character_views/rightView.png'
+          imageElement.src = 'character_views/rightView.png';
             leftPosition += moveDistance;
         
 
