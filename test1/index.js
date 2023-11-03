@@ -12,23 +12,23 @@ document.addEventListener('DOMContentLoaded', function () {
         
 
         if (event.key === 'ArrowRight') {
-            imageElement.src = '/character_views/rightView.png'; // Change to face right
+            imageElement.src = 'character_views/rightView.png'; // Change to face right
             leftPosition += moveDistance;
         
 
              } else if (event.key === 'd') {
             leftPosition += moveDistance;
-            imageElement.src = '/character_views/rightView.png'; // Change to face right
+            imageElement.src = 'character_views/rightView.png'; // Change to face right
     
 
 
         } else if (event.key === 'ArrowLeft') {
             leftPosition -= moveDistance;
-            imageElement.src = '/character_views/leftView.png'; // Change to face left
+            imageElement.src = 'character_views/leftView.png'; // Change to face left
 
              } else if (event.key === 'a') {
             leftPosition -= moveDistance;
-            imageElement.src = '/character_views/leftView.png'; // Change to face left
+            imageElement.src = 'character_views/leftView.png'; // Change to face left
 
 
 
@@ -36,22 +36,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
         } else if (event.key === 'ArrowDown') {
             topPosition += moveDistance;
-            imageElement.src = '/character_views/frontView.png'; // Change to face forward
+            imageElement.src = 'character_views/frontView.png'; // Change to face forward
 
              } else if (event.key === 's') {
             topPosition += moveDistance;
-            imageElement.src = '/character_views/frontView.png'; // Change to face forward
+            imageElement.src = 'character_views/frontView.png'; // Change to face forward
 
        
 
 
         } else if (event.key === 'ArrowUp') {
             topPosition -= moveDistance;
-            imageElement.src = '/character_views/backView.png'; // Change to face back
+            imageElement.src = 'character_views/backView.png'; // Change to face back
         
         } else if (event.key === 'w') {
             topPosition -= moveDistance;
-            imageElement.src = '/character_views/backView.png'; // Change to face back
+            imageElement.src = 'character_views/backView.png'; // Change to face back
  
         }
 
