@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         } else if (event.key === 'ArrowDown') {
             topPosition += moveDistance;
-            imageElement.src = "test1/character_views/frontView.png"; // Change to face forward
+            imageElement.src = "character_views/frontView.png"; // Change to face forward
 
              } else if (event.key === 's') {
             topPosition += moveDistance;
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         } else if (event.key === 'w') {
             topPosition -= moveDistance;
-            imageElement.src = "'character_views/backView.png' alt=back view" alt; // Change to face back
+            imageElement.src = "character_views/backView.png" alt; // Change to face back
  
         }
 
