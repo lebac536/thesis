@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('keydown', (event) => {
         console.log("Key pressed:", event.key);
 
-        const moveDistance = 40;
+        const moveDistance = 30;
         
 
         if (event.key === 'ArrowRight' && leftPosition < maxX) {
