@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         } else if (event.key === 'w') {
             topPosition -= moveDistance;
-            imageElement.src = "character_views/backView.png"; // Change to face back
+            imageElement.src = "'character_views/backView.png' alt=back view" alt; // Change to face back
  
         }
 
