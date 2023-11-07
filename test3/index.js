@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const imageElement = document.getElementById('image');
     let leftPosition = 0;
     let topPosition = 0;
-    const jumpHeight = 30;
+    let jumpHeight = 30;
     let isJumping = false;
 
 
@@ -64,12 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
             topPosition -= moveDistance;
             imageElement.src = "character_views_pixel/french/back_french.png"; // Change to face back
  
-        } else if (event.key === ' ' && !isJumping) { // Space bar pressed
-            // Jump when the space bar is pressed
-           isJumping= true;
-           jump ()
-
-        }
+        } else  if (event.key === ' ') { // Check if the spacebar is pressed
+            jump(); }
 
         
 
@@ -78,33 +74,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
-    function jump() {
-        let jumpHeightReached = 0;
-        const jumpInterval = setInterval(() => {
-            if (jumpHeightReached < jumpHeight) {
-                topPosition -= 7; // Adjust the jump speed as needed
-                movableDiv.style.top = topPosition + 'px';
-            } else {
-                clearInterval(jumpInterval);
-                fallBack();
-            }
-        }, 20);
-    }
+ 
 
-    function fallBack() {
-        const fallInterval = setInterval(() => {
-            if (topPosition < maxY) {
-                topPosition += 5; // Adjust the fall speed as needed
-                movableDiv.style.top = topPosition + 'px';
-            } else {
-                topPosition = maxY;
-                isJumping = false;
-                clearInterval(fallInterval);
-            }
-        }, 20);
-    }
+
 
 
         
 
 });
+
+function jump() {
+    const jumpHeight = 70; // Adjust the jump height as needed
+    const jumpSpeed = 4; // Adjust the jump speed as needed
+    const fallSpeed = 6 ; // Adjust the fall speed as needed
+    const originalTop = parseInt(getComputedStyle(movableDiv).top);
+
+    function jumpUp() {
+        if (parseInt(getComputedStyle(movableDiv).top) > originalTop - jumpHeight) {
+            movableDiv.style.top = (parseInt(getComputedStyle(movableDiv).top) - jumpSpeed) + 'px';
+            requestAnimationFrame(jumpUp);
+        } else {
+            fallDown();
+        }
+    }
+
+    function fallDown() {
+        if (parseInt(getComputedStyle(movableDiv).top) < originalTop) {
+            movableDiv.style.top = (parseInt(getComputedStyle(movableDiv).top) + fallSpeed) + 'px';
+            requestAnimationFrame(fallDown);
+        } else {
+            movableDiv.style.top = originalTop + 'px';
+        }
+    }
+
+    jumpUp();
+}
