@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function jump() {
-    const jumpHeight = 70; // Adjust the jump height as needed
+    const jumpHeight = 50; // Adjust the jump height as needed
     const jumpSpeed = 4; // Adjust the jump speed as needed
     const fallSpeed = 6 ; // Adjust the fall speed as needed
     const originalTop = parseInt(getComputedStyle(movableDiv).top);
