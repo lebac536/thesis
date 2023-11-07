@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const imageElement = document.getElementById('image');
     let leftPosition = 0;
     let topPosition = 0;
+    const jumpHeight = 30;
+    let isJumping = false;
 
 
 
@@ -62,6 +64,11 @@ document.addEventListener('DOMContentLoaded', function () {
             topPosition -= moveDistance;
             imageElement.src = "character_views_pixel/french/back_french.png"; // Change to face back
  
+        } else if (event.key === ' ' && !isJumping) { // Space bar pressed
+            // Jump when the space bar is pressed
+           isJumping= true;
+           jump ()
+
         }
 
         
@@ -69,6 +76,35 @@ document.addEventListener('DOMContentLoaded', function () {
         movableDiv.style.left = leftPosition  + 'px';
         movableDiv.style.top = topPosition + 'px';
 
-        // background.style.backgroundPosition = `${leftPosition / 2}px ${topPosition / 2}px`;
     });
+
+    function jump() {
+        let jumpHeightReached = 0;
+        const jumpInterval = setInterval(() => {
+            if (jumpHeightReached < jumpHeight) {
+                topPosition -= 7; // Adjust the jump speed as needed
+                movableDiv.style.top = topPosition + 'px';
+            } else {
+                clearInterval(jumpInterval);
+                fallBack();
+            }
+        }, 20);
+    }
+
+    function fallBack() {
+        const fallInterval = setInterval(() => {
+            if (topPosition < maxY) {
+                topPosition += 5; // Adjust the fall speed as needed
+                movableDiv.style.top = topPosition + 'px';
+            } else {
+                topPosition = maxY;
+                isJumping = false;
+                clearInterval(fallInterval);
+            }
+        }, 20);
+    }
+
+
+        
+
 });

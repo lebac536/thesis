@@ -195,9 +195,7 @@
   button,
   [type="button"],
   [type="reset"],
-  [type="submit"] {
-    -webkit-appearance: button;
-  }
+  [type="submit"] 
   
   /**
    * Remove the inner border and padding in Firefox.
@@ -287,11 +285,6 @@
    * 2. Correct the outline style in Safari.
    */
   
-  [type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    outline-offset: -2px; /* 2 */
-  }
-  
   /**
    * Remove the inner padding in Chrome and Safari on macOS.
    */
@@ -352,12 +345,15 @@
 body {
    
     background-color:black;
-    position: absolute;
     color: bisque;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     /* align-items: center; */
     text-align: center;
     align-items: center;
+}
+
+#outside_of_box {
+padding-top: 50px;
 }
 
 
@@ -385,4 +381,7 @@ display: inline;
 align-self: center;
 height: 72px;
 
+
+
 }
+
