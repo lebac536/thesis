@@ -1,0 +1,56 @@
+@font-face { font-family: PP Telegraf; src: url(PPTelegraf/PPTelegraf-Regular.otf);
+    font-family: PP Telegraf Bold; src: url(PPTelegraf/PPTelegraf-Ultrabold.otf); } 
+
+body {
+    background-color: rgb(19, 19, 21);
+    color: white;
+
+}
+
+#text {
+  width: 50vw;  
+  padding-left: 23%;
+  padding-top: 2vh;
+  
+}
+h1 {
+    width: 50vw;
+    font-family: PP Telegraf Bold;
+    line-height: 6vh;
+    font-size: 5vh;
+    text-align:left;
+
+}
+
+p {
+    font-family: PP Telegraf;
+    font-size: 3vh;
+}
+
+span {
+    color: rgb(46, 117, 205);
+}
+
+span:hover {
+    color: rgb(205, 57, 46);
+}
+
+
+.image-container {
+    position: relative;
+}
+
+.image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+
+}
+
+
+.image-container:hover .image {
+    display: block;
+    cursor: pointer;
+}
